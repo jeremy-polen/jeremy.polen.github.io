@@ -1,0 +1,54 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: roboto, sans-serif;
+    background-color: black;
+}
+
+.home {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+video {
+    position: absolute;
+    width: auto;
+    height: 100vh;
+    min-height: 200px;
+    object-fit: cover;
+}
+.home-content {
+    position: relative;
+    padding-top: auto;
+    color: #fff;
+    text-align: center;
+}
+h1 {
+    font-family: Playfair Display, serif;
+    font-size: clamp(45px, 7vw, 130px);
+    line-height: 1.1;
+}
+
+.home p {
+    font-size: clamp(25px, 4vw, 40px);
+    margin-top: 10px;
+}
+
+.home-content button {
+    display: block;
+    font-size: clamp(28px, 3vw, 36px);
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    background: transparent;
+    color: #fff;
+    margin: auto;
+    padding: 12px 20px;
+    cursor: pointer;
+}

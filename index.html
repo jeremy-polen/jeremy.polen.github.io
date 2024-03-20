@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mold Design Course - Akron Institute - Mick Guistino</title>
+  <link rel="stylesheet" href="style.css">
+
+<body>
+
+
+<div class="home">
+    <video id="Video" autoplay onclick="videoClick()">
+        <source src="Content/Video/Course Promo_Web.mp4" type="video/mp4">
+          Browser not supported.
+      </video>
+
+      <div class="home-content">
+       
+        <button id="playButton" onclick="playVid()" type="button">Play Video</button>
+        
+        <button id="learnMoreButton" onclick="learnMoreForm()" >Learn More</button>
+
+      </div>
+    </div>
+
+<script> 
+
+let vid = document.getElementById("Video"); 
+document.getElementById("Video").addEventListener('ended', videoEnd, false); 
+document.getElementById("learnMoreButton").style.display = "none";
+
+function playVid() { 
+  vid.play()
+  playButton.style.display = "none"; 
+} 
+
+function videoEnd() {
+  learnMoreButton.style.display = "block";
+}
+
+function videoClick() {
+  var x = document.getElementById("learnMoreButton");
+
+  if(x.style.display === "none") {
+    x.style.display = "block";
+//    vid.pause();
+    vid.style.opacity = .25;
+  }
+  else {
+    x.style.display ="none";
+//    vid.play();
+    vid.style.opacity = 1;
+  }
+}
+
+function  learnMoreForm() {
+  window.open("https://docs.google.com/forms/d/e/1FAIpQLSezqMEqyR4kO25MayBu3CMPXlt9LW34glieZNI_VYg58VhHfg/viewform?usp=sf_link");
+}
+
+</script> 
+    </body>
+</html>
